@@ -34,11 +34,11 @@ OSC D ──┘
 - **K3**: randomize current page
 - **K1+K3**: reset all to defaults
 
-**performance page (page 6):**
-- **E2**: macro 1
-- **E3**: macro 2
-- **K2+E2**: macro 3
-- **K2+E3**: macro 4
+performance page (page 6):
+
+E2: macro 1/3
+E3: macro 2/4
+K2: change macros 1/2 and 3/4
 
 each macro controls up to 4 parameters with independent depth. assign via params menu under "macros (performance)."
 
@@ -70,12 +70,11 @@ each macro controls up to 4 parameters with independent depth. assign via params
 
 **6 cross-modulation paths:** A↔B, C↔D, A↔C, B↔D provide FM between oscillator pairs.
 
-**macro performance:** 4 assignable macros, each mapping up to 4 parameters with independent depth. params menu lets you pick which parameters each macro controls. on the PERFORM page, E2/E3 and K2+E2/K2+E3 give you instant access to 4 macro knobs during performance.
+**macro performance:** 4 assignable macros, each mapping up to 4 parameters with independent depth. params menu lets you pick which parameters each macro controls. on the PERFORM page, E2/E3 and K2 give you instant access to 4 macro knobs during performance.
 
 ## requirements
 
 - norns (shield, standard, or fates)
-- no additional libraries
 - grid optional (not yet implemented)
 
 ## install
