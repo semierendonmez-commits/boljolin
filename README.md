@@ -36,9 +36,9 @@ OSC D ──┘
 
 performance page (page 6):
 
-E2: macro 1/3
-E3: macro 2/4
-K2: change macros 1/2 and 3/4
+- **E2**: macro 1/3
+- **E3**: macro 2/4
+- **K2**: change macros 1/2 and 3/4
 
 each macro controls up to 4 parameters with independent depth. assign via params menu under "macros (performance)."
 
