@@ -176,17 +176,15 @@ Engine_Boljolin : CroneEngine {
         (LFNoise1.ar(2.5)*stereo_width).clip(-1,1)]);
       panned = Pan2.ar(mono, pan_sig);
 
-      // ── delay (rungler-modulated) ────────────────────
+      // ── delay (rungler-modulated, stereo balanced) ────
       dly_t_mod = Lag.kr(
         (delay_time + (A2K.kr(rung) * xmod_dly_t * delay_time)).clip(0.001, 2.0),
         0.05);
       dly_fb_mod = (delay_fb + (A2K.kr(rung) * xmod_dly_fb * 0.5)).clip(0, 0.95);
 
-      del_l = CombC.ar(panned[0], 2.0,
-        (dly_t_mod * (1 + stereo_width.abs*0.18)).clip(0.001,2),
-        dly_fb_mod*6) * 0.35;
-      del_r = CombC.ar(panned[1], 2.0,
-        (dly_t_mod * (1 - stereo_width.abs*0.18)).clip(0.001,2),
+      del_l = CombC.ar(mono, 2.0, dly_t_mod.clip(0.001,2), dly_fb_mod*6) * 0.35;
+      del_r = CombC.ar(mono, 2.0,
+        (dly_t_mod * (1 + stereo_width.abs*0.12)).clip(0.001,2),
         dly_fb_mod*6) * 0.35;
 
       out_sig = [panned[0]+del_l, panned[1]+del_r];

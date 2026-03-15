@@ -25,15 +25,14 @@ end
 
 function Core.set_macro(m, val)
   Core.macros[m].value = util.clamp(val, 0, 1)
-  -- apply to all assigned params
   for _, slot in ipairs(Core.macros[m].slots) do
     local pid = slot[1]
     local depth = slot[2]
     local p = params:lookup_param(pid)
     if p and p.t == 3 then
-      -- controlspec param: offset from center (0.5)
-      local offset = (Core.macros[m].value - 0.5) * depth
-      local base = slot[3] or 0.5  -- stored base raw value
+      -- depth * 2 so full range sweep moves param significantly
+      local offset = (Core.macros[m].value - 0.5) * depth * 2
+      local base = slot[3] or 0.5
       params:set_raw(pid, util.clamp(base + offset, 0, 1))
     end
   end

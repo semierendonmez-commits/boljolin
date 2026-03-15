@@ -1,6 +1,6 @@
 # boljolin
 
-*bol* (Turkish) = plenty. plenty of oscillators, plenty of filters, plenty of modulation.
+*bol* (Turkish) = lots. lots of oscillators, lots of filters, lots of modulation.
 
 a 4-oscillator chaotic synth with open routing for [norns](https://monome.org/docs/norns/). evolved from the rungler series, inspired by Rob Hordijk's Benjolin — but expanded into a fully configurable instrument.
 
