@@ -81,7 +81,7 @@ each macro controls up to 4 parameters with independent depth. assign via params
 ## install
 
 ```
-;install https://github.com/semi/boljolin
+;install https://github.com/semierendonmez-commits/boljolin
 ```
 
 ## history
